@@ -1,0 +1,15 @@
+Always move onto adjacent food
+1 Always try to move to spaces that are adjacent to few lit spaces
+	How to fit diagonals into this?
+	2 Among those, try to move to spaces that have lit spaces 2 away
+0 If 1 is not possible, move into spaces that are already lit
+
+Improve logic for rule_0_prev_dir
+Create list of valid directions at start of pick_direction
+Diagonal cell check
+Add check_local for 2 cells away
+"Soften" the shader to make things look more organic, less obviously on a grid
+Config with weights for determining movement
+Improve food placement to fill in interpolated cells
+Multiple colors and different behavior around differently colored tunnels
+Should is_in_bounds receive the maze? Or a cleaner way?

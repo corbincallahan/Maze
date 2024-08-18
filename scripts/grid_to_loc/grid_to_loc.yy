@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"grid_to_loc",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"grid_to_loc",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
