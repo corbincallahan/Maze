@@ -11,3 +11,5 @@ prev_rule_0_dir_index = -1
 
 wander_limit = 1200
 wander_time = wander_limit
+
+color = irandom(2) + 2 // 2, 3, or 4

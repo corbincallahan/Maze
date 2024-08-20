@@ -18,4 +18,7 @@ if (get_color(maze, grid_x, grid_y) == 1) {
 	maker.grid_x = grid_x
 	maker.grid_y = grid_y
 	maker.trail_lifetime = trail_lifetime
+	maker.color = color
 }
+
+set_color(maze, grid_x, grid_y, color)

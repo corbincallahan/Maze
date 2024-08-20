@@ -1,4 +1,4 @@
-grid_size = 300
+grid_size = 1200
 trail_lifetime = 2400
 
 decay = instance_create_layer(0, 0, "Instances", oDecay)
