@@ -25,6 +25,7 @@ if (loc_color == 1) {
 	maker.trail_lifetime = trail_lifetime
 	maker.color = color
 	maker.target_color = target_color
+	maker.targeting_color = targeting_color
 }
 else if (loc_color == target_color * 2 + 1) {
 	for (var i = 0; i < instance_number(oMaker); i++) {
@@ -33,6 +34,10 @@ else if (loc_color == target_color * 2 + 1) {
 			instance_destroy(curr)
 		}
 	}
+}
+else if (loc_color == targeting_color * 2 + 1) {
+	// Need to iterate over makers and check?
+	instance_destroy()
 }
 
 if (dup_count >= dup_limit) {
@@ -43,6 +48,7 @@ if (dup_count >= dup_limit) {
 	maker.trail_lifetime = trail_lifetime
 	maker.color = color
 	maker.target_color = target_color
+	maker.targeting_color = targeting_color
 }
 
 set_color(maze, grid_x, grid_y, color * 2 + 1)

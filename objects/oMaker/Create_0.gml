@@ -14,6 +14,7 @@ wander_time = wander_limit
 
 color = irandom(2) + 1
 target_color = color % 3 + 1
+targeting_color = (color + 1) % 3 + 1
 
 dup_limit = 600
 dup_count = 0

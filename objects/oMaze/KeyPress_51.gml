@@ -5,3 +5,4 @@ maker.grid_y = grid_pos[1]
 maker.trail_lifetime = trail_lifetime
 maker.color = 4
 maker.target_color = (maker.color - 1) % 3 + 2
+maker.targeting_color = (maker.color + 1) % 3 + 1

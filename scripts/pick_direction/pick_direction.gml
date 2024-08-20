@@ -101,7 +101,8 @@ function pick_direction(this){
 			if (not is_in_bounds(new_x, new_y)) {
 				continue
 			}
-			if (get_tunnel(maze, new_x, new_y) > 0) {
+			var loc_color = get_color(maze, new_x, new_y)
+			if (get_tunnel(maze, new_x, new_y) > 0 and loc_color != targeting_color * 2 and loc_color != targeting_color * 2 + 1) {
 				array_push(rule_0_dir_indices, i)
 			}
 		}
@@ -113,7 +114,7 @@ function pick_direction(this){
 			index = rule_0_dir_indices[rule_0_index]
 		}
 		else if (prev_rule_0_dir_index == -1) {
-			index = irandom(array_length(directions))
+			index = irandom(array_length(directions) - 1)
 		}
 		else {
 			index = prev_rule_0_dir_index

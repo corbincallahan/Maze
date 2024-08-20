@@ -8,7 +8,7 @@
   "option_draw_colour":4294967295,
   "option_gameguid":"05aaab25-71c0-4f53-8176-d716e2841082",
   "option_gameid":"0",
-  "option_game_speed":120,
+  "option_game_speed":30,
   "option_mips_for_3d_textures":false,
   "option_sci_usesci":false,
   "option_spine_licence":false,
