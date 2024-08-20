@@ -22,6 +22,51 @@ function pick_direction(this){
 			return food_dirs[food_index]
 		}
 		#endregion
+
+		#region RPS 1
+		var rps_dirs = []
+		for (var i = 0; i < array_length(directions); i += 1) {
+			var dir = directions[i]
+			var new_x = grid_x + dir[0]
+			var new_y = grid_y + dir[1]
+			if (not is_in_bounds(new_x, new_y)) {
+				continue
+			}
+			var loc_color = get_color(maze, new_x, new_y)
+			if ((loc_color == target_color * 2 or loc_color == target_color * 2 + 1) and get_tunnel(maze, new_x, new_y) > 0) {
+				array_push(rps_dirs, dir)
+			}
+		}
+		if (array_length(rps_dirs) > 0) {
+			prev_rule_0_dir_index = -1 // TODO ?
+			wander_time = wander_limit
+			dup_count += 1
+			var rps_index = irandom(array_length(rps_dirs) - 1)
+			return rps_dirs[rps_index]
+		}
+		#endregion
+
+		#region RPS 2
+		for (var i = 0; i < array_length(directions); i += 1) {
+			var dir = directions[i]
+			var new_x = grid_x + dir[0] * 2
+			var new_y = grid_y + dir[1] * 2
+			if (not is_in_bounds(new_x, new_y)) {
+				continue
+			}
+			var loc_color = get_color(maze, new_x, new_y)
+			if ((loc_color == target_color * 2 or loc_color == target_color * 2 + 1) and get_tunnel(maze, new_x, new_y) > 0) {
+				array_push(rps_dirs, dir)
+			}
+		}
+		if (array_length(rps_dirs) > 0) {
+			prev_rule_0_dir_index = -1 // TODO ?
+			wander_time = wander_limit
+			dup_count += 1
+			var rps_index = irandom(array_length(rps_dirs) - 1)
+			return rps_dirs[rps_index]
+		}
+		#endregion
 		
 		#region Rule 1
 		var rule_1_dirs = []

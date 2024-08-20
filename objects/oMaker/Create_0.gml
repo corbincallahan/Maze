@@ -9,7 +9,11 @@ trail_lifetime = -1
 
 prev_rule_0_dir_index = -1
 
-wander_limit = 1200
+wander_limit = 600
 wander_time = wander_limit
 
-color = irandom(2) + 2 // 2, 3, or 4
+color = irandom(2) + 1
+target_color = color % 3 + 1
+
+dup_limit = 600
+dup_count = 0
